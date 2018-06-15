@@ -9,14 +9,11 @@ router.route('/').get(function(request, response) {
 router.route('/news').get(function(request, response) {
     /*const news = [{'title': 1}]
     response.send(news)*/
-
-    var request = axios
-    
-    .get('https://newsapi.org/v2/top-headlines?' +
+    axios.get('https://newsapi.org/v2/top-headlines?' +
     'country=us&' +
     'apiKey=ed9c4f200b1a4a988016134b00a2d060')
    
-    .then((httpResponse) => console.log(httpResponse.data))
+    .then((httpResponse) => response.send(httpResponse.data)) 
 })
 
 router.route('/comment').get(function(request, response) {

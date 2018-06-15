@@ -415,7 +415,7 @@ eval("// shim for using process in browser\nvar process = module.exports = {};\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _axios = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n\nvar _axios2 = _interopRequireDefault(_axios);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n_axios2.default.get('http://127.0.0.1:8080/news').then(function (response) {\n    return response.data.articles;\n    console.log(response);\n});\n\n//# sourceURL=webpack:///./src/app.js?");
+eval("\n\nvar _axios = __webpack_require__(/*! axios */ \"./node_modules/axios/index.js\");\n\nvar _axios2 = _interopRequireDefault(_axios);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n_axios2.default.get('http://127.0.0.1:8080/news').then(function (response) {\n    console.log(response);\n\n    var news = \"\";\n    for (var i = 0; i < response.data.articles.length; i++) {\n        news = news + \"<li href><a href=\" + response.data.articles[i].url + \"><p>\" + response.data.articles[i].publishedAt + \"  -  \" + response.data.articles[i].title + \"</p></a></li>\";\n        console.log(news);\n    }\n    document.getElementById(\"filnews\").innerHTML = news;\n    /*\"<li><p>\"+Date de publication - titre de larticle clickable+\"</p></li>\"+\r\n    \"<li><p>\"+Date de publication - titre de larticle clickable+\"</p></li>\"+*/\n});\n\n//# sourceURL=webpack:///./src/app.js?");
 
 /***/ })
 
