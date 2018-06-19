@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>Web Actus</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -14,9 +14,9 @@ body {font-family: "Lato", sans-serif}
     <div class="w3-top">
         <div class="w3-bar w3-black w3-card">
           <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-          <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-          <a href="#une" class="w3-bar-item w3-button w3-padding-large w3-hide-small">La Une</a>
-          <a href="#fil" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Fil d'actualité</a>
+          <a href="#" class="w3-bar-item w3-button w3-padding-large">Accueil</a>
+          <a href="#uneNews" class="w3-bar-item w3-button w3-padding-large w3-hide-small">La Une</a>
+          <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Fil d'actualité</a>
           <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Contact</a>
         </div>
       </div>
@@ -29,24 +29,20 @@ body {font-family: "Lato", sans-serif}
         </div>
 
 <!-- Page content -->
-<div class="w3-content" style="max-width:2000px;margin-top:46px">
-
+<div class="w3-content" style="max-width:2000px;margin-top:46px" >
 <!-- Automatic Slideshow Images -->
-<div class="mySlides w3-display-container w3-center" id="laUne">
-    <!--<img src="https://media2.s-nbcnews.com/j/newscms/2018_25/2468401/180618-border-patrol-mc-81_b0b983ec13a709f45030e0ecafd9c275.1200;630;7;70;5.JPG" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>Los Angeles</h3>
-      <p><b>We had the best time playing at Venice Beach!</b></p>   
-    </div>-->
-  </div>
-
+<div class="mySlides w3-display-container w3-center" id="uneNews">
+ 
+</div>
   <!-- The actualité Section -->
   <div class="w3-black" id="tour">
     <div class="w3-container w3-content w3-padding-64" style="max-width:70%; text-align: center;">
         <h2 class="w3-wide w3-center">FIL D'ACTUALITE</h2>
 
-      <ul class="w3-ul w3-border w3-white w3-text-grey" id="filnews">
-          
+      <ul class="w3-ul w3-border w3-white w3-text-grey" >
+          <div id="easyPaginate" >
+
+          </div>
         </ul>
 
       </div>
@@ -56,12 +52,11 @@ body {font-family: "Lato", sans-serif}
   <!-- The Contact Section -->
   <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
     <h2 class="w3-wide w3-center">CONTACT</h2>
-    <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
     <div class="w3-row w3-padding-32">
       <div class="w3-col m6 w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker" style="width:30px"></i> Chicago, US<br>
-        <i class="fa fa-phone" style="width:30px"></i> Phone: +00 151515<br>
-        <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
+        <i class="fa fa-map-marker" style="width:30px"></i> Paris, Fr<br>
+        <i class="fa fa-phone" style="width:30px"></i> Phone: +33 151515<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: ActusWebmail@mail.com<br>
       </div>
       <div class="w3-col m6">
         <form action="/action_page.php" target="_blank">
@@ -74,7 +69,7 @@ body {font-family: "Lato", sans-serif}
             </div>
           </div>
           <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+          <button class="w3-button w3-black w3-section w3-right" type="submit">Envoyer</button>
         </form>
       </div>
     </div>
@@ -101,7 +96,7 @@ carousel();
 
 function carousel() {
     var i;
-    var x = document.getElementsByClassName("mySlides");
+    var x = document.getElementsByClassName("mySlides"); 
     for (i = 0; i < x.length; i++) {
        x[i].style.display = "none";  
     }
@@ -128,7 +123,11 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+
 </script>
+<script src="//code.jquery.com/jquery.min.js"></script>
+<script src="jquery.paginate.js"></script>
 <script type="text/javascript" src="dist/news.js">
         
 </script>  
